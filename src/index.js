@@ -2,9 +2,9 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { BrowserRouter } from "react-router-dom";
 
-import App from './app';
+import App from './components/app';
 
-// Main entry point for any Bootstrap 4 or Sass styles
+// Main entry point for top-level styles
 import './styles/main.scss';
 
 

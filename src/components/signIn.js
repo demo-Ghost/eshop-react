@@ -1,10 +1,9 @@
 import React, { useEffect, useState } from 'react';
 
-import './styles/components/signIn.scss';
+import services from '../services';
 
-import services from './services';
+import '../styles/components/signIn.scss';
 
-console.log(services);
 
 const SignIn = () => {
   const [user, setUser] = useState();

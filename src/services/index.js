@@ -1,7 +1,5 @@
-import auth from './auth';
-import user from './user';
-
-console.log(auth, user);
+import auth from './auth.service';
+import user from './user.config';
 
 export default {
   ...auth,
