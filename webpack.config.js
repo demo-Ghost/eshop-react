@@ -1,4 +1,4 @@
-var HtmlWebpackPlugin = require('html-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
   entry: './src/index.js',
@@ -8,6 +8,14 @@ module.exports = {
         test: /\.(js|jsx)$/,
         exclude: /node_modules/,
         use: ['babel-loader']
+      },
+      {
+        test: /\.scss$/,
+        use: [
+          'style-loader',
+          'css-loader',
+          'sass-loader'
+        ]
       }
     ]
   },
@@ -22,7 +30,9 @@ module.exports = {
   devServer: {
     contentBase: './dist'
   },
-  plugins: [new HtmlWebpackPlugin({
-    template: 'index.html'
-  })]
+  plugins: [
+    new HtmlWebpackPlugin({
+      template: 'index.html'
+    }),
+  ]
 };
