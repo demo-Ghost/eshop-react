@@ -1,7 +1,4 @@
-import auth from './auth.service';
-import user from './user.config';
+import { getProducts } from "./products.service";
+import { getCategories } from "./categories.service";
 
-export default {
-  ...auth,
-  ...user,
-};
+export { getProducts, getCategories };
