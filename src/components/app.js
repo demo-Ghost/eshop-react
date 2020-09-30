@@ -1,13 +1,12 @@
-import React from 'react';
+import React from "react";
 
-import SignIn from './signIn';
+import Layout from "./layout";
+import Page from "./page";
 
-
-const App = ({ title }) => (
-  <div className="text-primary">
-    {title}
-    <SignIn />
-  </div>
+const App = () => (
+  <Layout>
+    <Page />
+  </Layout>
 );
 
 export default App;

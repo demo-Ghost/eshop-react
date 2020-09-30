@@ -1,18 +1,15 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
+import React from "react";
+import ReactDOM from "react-dom";
 import { BrowserRouter } from "react-router-dom";
 
-import App from './components/app';
+import App from "./components/app";
 
-// Main entry point for top-level styles
-import './styles/main.scss';
-
-
-const title = 'React Starter';
+// Main entry point for stylesheets + Bootstrap 4
+import "./styles/main.scss";
 
 ReactDOM.render(
   <BrowserRouter>
-    <App title={title} />
+    <App />
   </BrowserRouter>,
-  document.getElementById('app')
+  document.getElementById("app")
 );
