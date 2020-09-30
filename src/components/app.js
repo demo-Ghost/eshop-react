@@ -7,7 +7,7 @@ import { Category, Home, SearchResults } from "../pages";
 import { getProducts, getCategories } from "../services";
 
 const App = () => {
-  const [product, setProducts] = useState();
+  const [products, setProducts] = useState();
   const [categories, setCategories] = useState();
 
   useEffect(() => {
@@ -28,23 +28,30 @@ const App = () => {
     loadCategories();
   }, []);
 
-  return (
-    <Layout>
-      <Switch>
-        <Route exact path="/">
-          <Home />
-        </Route>
+  console.log("categories", categories);
+  console.log("products", products);
 
-        <Route path="/category">
-          <Category />
-        </Route>
+  if (categories) {
+    return (
+      <Layout categories={categories}>
+        <Switch>
+          <Route exact path="/">
+            <Home />
+          </Route>
 
-        <Route path="/search-results">
-          <SearchResults />
-        </Route>
-      </Switch>
-    </Layout>
-  );
+          <Route path="/category">
+            <Category />
+          </Route>
+
+          <Route path="/search-results">
+            <SearchResults />
+          </Route>
+        </Switch>
+      </Layout>
+    );
+  } else {
+    return null;
+  }
 };
 
 export default App;
