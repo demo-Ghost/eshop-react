@@ -8,7 +8,7 @@ const Home = () => {
       <p>Search works only with button</p>
       <p>Mobile hamburger menu</p>
       <p>Order by price with select</p>
-      <p>Routing to slugs other than / directly with url</p>
+      <p>Routing to slugs other than "/" directly with url (need HashRouter)</p>
     </div>
   );
 };
