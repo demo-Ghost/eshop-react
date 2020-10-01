@@ -1,8 +1,12 @@
 import axios from "./axios";
 
 async function getCategories() {
-  const categoriesResponse = await axios.get("/categories");
-  return categoriesResponse.data;
+  try {
+    const categoriesResponse = await axios.get("/categories");
+    return categoriesResponse.data;
+  } catch (error) {
+    return Error;
+  }
 }
 
 export { getCategories };
